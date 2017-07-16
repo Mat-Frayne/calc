@@ -1,4 +1,4 @@
-!#/usr/bin/python3
+!  # /usr/bin/python3
 """."""
 
 
@@ -30,7 +30,7 @@ class Mine():
         }
         type_ = types.get(self.type.lower(), self.type.lower())
         result = calculate.get(type_, None)
-        if isinstance(result, Exception) or not callable(result):
+        if not callable(result):
             raise Exception("Error: '{}' is not a valid symbol, ({})".format(
                 self.type.lower(), ", ".join(x for x in [*types, *calculate])))
         return result()
